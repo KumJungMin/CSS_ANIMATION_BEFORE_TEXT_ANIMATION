@@ -95,8 +95,8 @@ a {
 
 #### (3) before, after 애니메이션 설정
 
-- `before`는 `hover`시 위로 올라가 화면 상에 나타남
-- `after`는 `hover`시 위로 올라가 화면 상에서 사라짐
+- `before`는 `hover`시 위로 올라가 화면 상에 사라짐
+- `after`는 `hover`시 위로 올라가 화면 상에서 나타남
 
 <img src="./test4/image/2.jpeg"/>
 
