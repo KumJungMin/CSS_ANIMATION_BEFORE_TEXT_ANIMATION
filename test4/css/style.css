@@ -1,0 +1,64 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(orange, orangered);   
+}
+a {
+    text-decoration: none;
+    color: #222;
+  }
+
+.gnb{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+    padding-bottom: 10px;
+}
+
+.gnb a{
+    width: 80px;  
+    display: inline-block; /*inline-block을 하면 a태그와 같은 inline들의 크기 설정이 가능(a태그의 블록화)*/
+    height: 30px;
+    line-height: 30px;   /*글자의 세로 위치를 조정*/
+    text-align: center;
+    position: relative;
+    overflow: hidden;  /*넘치는 before, after를 숨긴다.*/
+}
+
+.gnb a:before,
+.gnb a:after{
+    position: absolute;  /*부모가 relative이므로, 자식은 절대위치로 화면크기변동에도 같은 위치를 유지할 수 있음*/
+    content: attr(data-link);  /*attr을 사용하여 html의 속성을 사용*/
+    width: 100%;
+}
+
+.gnb a:before{
+    top : 0;  /*부모속성위에 겹쳐있게함*/
+    left : 0;
+    transition: 0.3s;
+  
+}
+/* before는 hover시 위로 올라감 */
+.gnb a:hover:before{
+    top : -100%;
+}
+
+
+.gnb a:after{
+    top : 100%;
+    left : 0;
+    color : #ff8c5f;
+    transition: 0.3s;
+}
+
+
+.gnb a:hover:after{
+    top : 0;
+}
